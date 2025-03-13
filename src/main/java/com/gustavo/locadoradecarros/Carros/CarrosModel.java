@@ -1,10 +1,12 @@
-package com.gustavo.locadoradecarros;
+package com.gustavo.locadoradecarros.Carros;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import com.gustavo.locadoradecarros.Cliente.ClienteModel;
 
 @Entity
 @Table(name = "tb_carros")
@@ -15,6 +17,10 @@ public class CarrosModel {
   Long id;
   private String marca;
   private String nome;
-  int ano;
-  int KM;
+  private int ano;
+  private int KM;
+
+  @OneToMany
+  private ClienteModel cliente;
+  
 }

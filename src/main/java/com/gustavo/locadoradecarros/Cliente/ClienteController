@@ -1,4 +1,4 @@
-package com.gustavo.locadoradecarros;
+package com.gustavo.locadoradecarros.Cliente;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,11 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping
-public class Controller {
+public class ClienteController {
 
-  @GetMapping("/carros")
+  @GetMapping("/cliente")
   public String Carros() {
     return "Rodando...";
   }
-  
 }
